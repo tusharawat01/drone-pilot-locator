@@ -30,7 +30,13 @@ Drone Pilot Locator is a web application that helps you find the nearest drone p
 ![Admin's Location](public/screenshots/FilterTop10Pilots.png)
 
 ### 5. Pilots Details When Clicking The Tooltip
-![Admin's Location](public/DetailsOfEveryPilot.png)
+![Admin's Location](public/screenshots/DetailsOfEveryPilot.png)
+
+## Video Demo
+
+### Screen Recording of Drone-Pilots-Locator website.
+[![Drone Pilot Locator Demo](https://img.youtube.com/vi/5bmOmVaYuwI/0.jpg)](https://www.youtube.com/watch?v=5bmOmVaYuwI)
+
 
 ## Installation
 
