@@ -13,4 +13,17 @@
   height: 100vh;
 }
 
+.cluster-icon{
+  height: 3rem;
+  width:3rem;
+  border-radius: 50%;
+  background-color: rgb(208, 77, 77);
+  transform: translate(-25%, -25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
 
