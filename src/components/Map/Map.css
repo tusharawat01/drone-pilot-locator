@@ -28,4 +28,36 @@
     font-size: 0.7rem;
     border-radius: 6px;
     z-index: 1000;
+    cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+
+.controls .input {
+  display: flex;
+  position: relative;
+  left:4rem;
+  align-items: center;
+  gap: 5px;
+  
+}
+
+.controls .input label {
+  font-size: 1rem;
+  z-index: 1000;
+
+}
+
+.controls .input input {
+  width: 6rem;
+  padding: 5px;
+  font-size: 14px;
+  z-index: 1000;
 }

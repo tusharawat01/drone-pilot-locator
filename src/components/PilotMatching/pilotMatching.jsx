@@ -57,7 +57,7 @@ const PilotMatching = ({ pilots }) => {
           onChange={e => setMaxDistanceKm(Number(e.target.value))}
         />
       </div>
-      <button className="btn" onClick={handleCalculateMatch}>Calculate Matches</button>
+      <button className="btn1" onClick={handleCalculateMatch}>Calculate Matches</button>
 
       {searchMessage && <p className="search-message">{searchMessage}</p>}
       

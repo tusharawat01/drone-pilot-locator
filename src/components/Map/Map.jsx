@@ -16,7 +16,7 @@ import React, {useState} from 'react';
 
 function Map() {
   const [filteredPilots, setFilteredPilots] = useState(dummyData);
-  
+  const [filterDist, setFilterDist] = useState("100");
   const location = useGeoLocation();
 
   const customIcon = new Icon({
@@ -33,6 +33,12 @@ function Map() {
   }
 
   const handleNearestPilots = () => {
+
+    if (!location.loaded) {
+      alert('Location data is not available yet.');
+      return;
+    }
+
     const filtered = dummyData
       .map(pilot => ({
         ...pilot,
@@ -43,7 +49,7 @@ function Map() {
           pilot.location.coordinates.lng
         ),
       }))
-      .filter(pilot => pilot.distance <= 300);
+      .filter(pilot => pilot.distance <= filterDist);
 
     setFilteredPilots(filtered);
   };
@@ -54,11 +60,23 @@ function Map() {
 
 
   return (
-    <>
+    <div className='controls'>
     
     <MapContainer center = {[28.7041, 77.1025]} zoom = {13}>
+
     <button className='btn' onClick={handleNearestPilots}>Nearest Pilots</button>
     <button className='btn' onClick={handleAllPilots}>All Pilots</button>
+    <div className='input'>
+          <label htmlFor="distance-filter">Distance (km):</label>
+          <input
+            id="distance-filter"
+            type="number"
+            value={filterDist}
+            placeholder='100'
+            onChange={(e) => setFilterDist(Number(e.target.value))}
+          />
+        </div>
+
     <TileLayer 
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -93,7 +111,7 @@ function Map() {
           </Marker>
         )}
   </MapContainer>
-  </>
+  </div>
       
   )
 }
