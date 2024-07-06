@@ -23,7 +23,7 @@ Drone Pilot Locator is a web application that helps you find the nearest drone p
 ### 2. Nearest Pilots From User(10 Km range)
 ![Nearest Pilots From User](public/screenshots/PilotsNearYou.png)
 
-### 3.If No Pilots Is In The Range User Give(cordinates[25, 25] and distance 10Km)
+### 3.If No Pilots Is In The Range User Give(cordinates[25, 25] and distance 100Km)
 ![If No Pilots Is In The Range User Give](public/screenshots/NoPilotInARange.png)
 
 ### 4. Pilots Location with Filter Controls(cordinates[25, 25] and distance 5000Km)
