@@ -18,29 +18,34 @@ Drone Pilot Locator is a web application that helps you find the nearest drone p
 ## Screenshots
 
 ### 1. All Pilots Displayed(Red Marker) & User Also(Blue Marker)
+
 ![All Pilots Displayed](public/screenshots/LandingPage&ShowingUserLocation.png)
 
-### 2. Nearest Pilots From User
-![Nearest Pilots 100 km](public/screenshots/PilotsNearYou.png)
+### 2. Nearest Pilots From User(10 Km range)
 
-### 3.If No Pilots Is In The Range User Give
-![Nearest Pilots 300 km](public/screenshots/NoPilotInRange.png)
+![Nearest Pilots From User](public/screenshots/PilotsNearYou.png)
 
-### 4. Pilots Location with Filter Controls
-![Admin's Location](public/screenshots/FilterTop10Pilots.png)
+### 3.If No Pilots Is In The Range User Give(cordinates[25, 25] and distance 100Km)
+
+![If No Pilots Is In The Range User Give](public/screenshots/NoPilotInARange.png)
+
+### 4. Pilots Location with Filter Controls(cordinates[25, 25] and distance 5000Km)
+
+![Pilots Location with Filter Controls](public/screenshots/FilterTop10Pilots.png)
 
 ### 5. Pilots Details When Clicking The Tooltip
-![Admin's Location](public/screenshots/DetailsOfEveryPilot.png)
+
+![Pilots Details When Clicking The Tooltip](public/screenshots/DetailsOfEveryPilot.png)
 
 ## Video Demo
 
 ### Screen Recording of Drone-Pilots-Locator website.
-[![Drone Pilot Locator Demo](https://img.youtube.com/vi/5bmOmVaYuwI/0.jpg)](https://www.youtube.com/watch?v=5bmOmVaYuwI)
 
+[![Drone Pilot Locator Demo](https://img.youtube.com/vi/5bmOmVaYuwI/0.jpg)](https://www.youtube.com/watch?v=5bmOmVaYuwI)
 
 ## Installation
 
 1. Clone the repository
    ```sh
    git clone https://github.com/tusharawat01/drone-piolet-map.git
-
+   ```
