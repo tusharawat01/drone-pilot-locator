@@ -7,30 +7,31 @@ const PilotMatching = ({ pilots }) => {
   const [maxDistanceKm, setMaxDistanceKm] = useState("");
   const [matchedPilots, setMatchedPilots] = useState([]);
   const [searchMessage, setSearchMessage] = useState('');
-
   const handleCalculateMatch = () => {
-    if (!adminLocation.lat || !adminLocation.lng || !maxDistanceKm) {
-      alert("Please enter latitude, longitude, and maximum distance.");
+    const lat = parseFloat(adminLocation.lat);
+    const lng = parseFloat(adminLocation.lng);
+
+    if (isNaN(lat) || isNaN(lng) || !maxDistanceKm) {
+      setSearchMessage('Please enter valid latitude, longitude, and maximum distance.');
       return;
     }
 
     const filteredPilots = pilots
       .map(pilot => ({
         ...pilot,
-        distance: calculateDistance(adminLocation.lat, adminLocation.lng, pilot.location.coordinates.lat, pilot.location.coordinates.lng)
+        distance: calculateDistance(lat, lng, pilot.location.coordinates.lat, pilot.location.coordinates.lng)
       }))
-      .filter(pilot => pilot.distance <= maxDistanceKm)
-      .sort((a, b) => b.workExperience - a.workExperience);
+      .filter(pilot => pilot.workExperience >= 2 && pilot.distance <= maxDistanceKm)
+      .sort((a, b) => a.distance - b.distance);
 
-      setMatchedPilots(filteredPilots.slice(0, 10));
+    setMatchedPilots(filteredPilots.slice(0, 10));
 
-      if (filteredPilots.length === 0) {
-        setSearchMessage('No pilots found in this region.');
-      } else {
-        setSearchMessage('');
-      }
+    if (filteredPilots.length === 0) {
+      setSearchMessage('No pilots found in this region.');
+    } else {
+      setSearchMessage('');
+    }
   };
-
   return (
     <div className='matched'>
       <div className='inputs'>
