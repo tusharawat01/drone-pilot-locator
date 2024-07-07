@@ -64,9 +64,8 @@
 
 @media (max-width: 500px) {
   .leaflet-container{
-    padding: 0.5rem;
     height: 60vh;
-    width:90vw;
+    width:100vw;
     border: 2px solid gray;
   }
   .cluster-icon{

@@ -48,10 +48,12 @@ ol{
 @media (max-width: 500px) {
     .matched{
         height: auto;
-        width: 100vw;
+        width: 95vw;
+        background-color: rgb(231, 215, 215);
     }
 
     .inputs{
         display: flex;
+        color: black;
     }
   }
